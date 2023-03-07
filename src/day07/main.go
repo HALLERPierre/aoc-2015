@@ -51,7 +51,7 @@ func findValue(instructions *hashmap.Map, values *hashmap.Map, target string) in
 		break
 	case "OR":
 		if len(instruction.sources) == 1 {
-			newValue = instruction.value & findValue(instructions, values, instruction.sources[0])
+			newValue = instruction.value | findValue(instructions, values, instruction.sources[0])
 		} else {
 			newValue = findValue(instructions, values, instruction.sources[0]) | findValue(instructions, values, instruction.sources[1])
 		}

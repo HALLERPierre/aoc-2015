@@ -58,7 +58,7 @@ func isCorrectPartOne(line string) bool {
 
 func isCorrectPartTwo(line string) bool {
 	repeatChars := false
-	repeatCharBetween := true
+	repeatCharBetween := false
 	var prevChar rune
 	for i, char := range line {
 		if i != 0 {
